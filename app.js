@@ -17,7 +17,7 @@ const User = require('./models/user');
 const mongoSanitize = require('express-mongo-sanitize');
 const MongoDBStore = require("connect-mongo")(session);
 
-const dbUrl = 'mongodb://127.0.0.1:27017/yelp-camp';
+const dbUrl = process.env.DB_URL;
 
 
 const { AsyncLocalStorage } = require('async_hooks');
